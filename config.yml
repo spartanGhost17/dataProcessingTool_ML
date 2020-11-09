@@ -1,0 +1,31 @@
+language: en
+pipeline: #supervised_embeddings
+- name: "WhitespaceTokenizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper" #mapp synonyms to wanted entity
+- name: "CountVectorsFeaturizer"
+- name: "CountVectorsFeaturizer"
+- name: "EmbeddingIntentClassifier"
+- name: "DucklingHTTPExtractor"
+  url: "http://192.168.99.101:8000"
+  dimensions: ["time", "number"]
+  locale: 'en_UK'
+  timezone: "UK/London"
+
+
+policies:
+- name: MemoizationPolicy
+  max_history: 3 ##remember up to 3 messages upper
+- name: KerasPolicy
+- name: MappingPolicy
+- name: EmbeddingPolicy
+- name: FormPolicy
+#- name: TwoStageFallbackPolicy
+  #nlu_threshold: 0.3
+  #ambiguity_threshold: 0.1
+  #core_threshold: 0.3
+  #fallback_core_action_name: "action_reEnterInfo"
+  #fallback_nlu_action_name: "action_reEnterInfo"
+  #deny_suggestion_intent_name: "action_out_of_scope" #used if user deny proposed intent
+   

@@ -1,0 +1,134 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- new_files
+- find_errors_simple
+- find_errorsInterval
+- find_errorsInterval_newCount
+- find_newCount
+- mark_has_read
+- inform
+- extend_dataReturn
+- thank
+- stop_dataRequest
+- findLTgt_pointer
+- more_details
+
+entities:
+- warning_level
+- checked_log
+- mark_read
+- newError_report
+- time_interval
+- cancel
+- time
+- number
+- extend
+- warnig_level
+- warining_level
+- spaceTimePointer
+- details
+
+slots:
+  collected_time:
+    type: text
+  docs_currentQuery:
+    type: text
+    initial_value: '0'
+  extend:
+    type: unfeaturized
+  extracted_time:
+    type: unfeaturized
+  newError_report:
+    type: text
+  number:
+    type: unfeaturized
+  previous_message:
+    type: text
+  time:
+    type: unfeaturized
+  time_interval:
+    type: text
+  warning_level:
+    type: text
+  spaceTimePointer:
+    type: text
+    initial_value: 'empty'    
+
+responses:
+  utter_greet:
+  - text: Hey! I'm Ed. The Error Detection Bot. How may I help you?
+  - text: How can i help you today ?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_no_problem:
+  - text: no problem :)
+  - text: Alright! let me know if you need anything else
+  utter_reEnterInfo:
+  - text: Okay! can you please re-enter the information? please make sure to remove
+      all zeros before digits if you have either entered a date or time.
+  - text: Sure, to help me better understand, you please make sure to remove all zeros
+      before digits if you have either entered a date or time.
+  utter_requestTime:
+  - text: Alright, i can check the data set for {warning_level} but i need you to
+      give me a time
+  utter_looking_inDB:
+  - text: Alright , i'm looking into our data set now...
+  utter_requestWarning_level:
+  - text: Alright, i can find logs at that time. However, i need to know the log level
+      you want which can either be error or warning
+  utter_continue:
+  - text: Do you want to re-enter the search information ? because that's fine by
+      me i'm here to help
+  utter_showAllID:
+  - text: I am only showing you the first 3 three results for now, but
+  utter_extendResult:
+  - text: sure i'm looking fot that now
+  utter_LtGtpointer:
+  - text: alright i can do that for you, searching now...
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- action_search_database
+- utter_no_problem
+- action_infoCheck
+- utter_reEnterInfo
+- action_out_of_scope
+- utter_requestTime
+- utter_requestWarning_level
+- utter_continue
+- test
+- utter_looking_inDB
+- utter_showAllID
+- action_extend_result
+- utter_extendResult
+- action_mark_read
+- action_more_details
+- action_count_errors
+- utter_LtGtpointer
+- actionFindBeforeAfter
+
+forms:
+- check_requiredInput

@@ -1,0 +1,515 @@
+2020-03-13 02:57:02,999 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-03-13 03:01:01,472 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:01:01,546 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:01:08,403 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:01:08,407 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:01:17,260 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:01:17,267 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:01:30,449 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:01:30,453 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:01:51,521 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:01:51,525 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:02:28,334 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:02:28,337 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:03:33,721 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:03:33,725 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:04:39,120 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:04:39,122 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:05:44,553 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:05:44,556 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:06:49,962 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:06:49,966 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:12:24,247 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-03-13 03:13:05,832 [ERROR]  Encountered an exception while running action 'action_search_database'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-03-13 03:14:23,059 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:14:23,081 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:14:29,903 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:14:29,910 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:14:38,705 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:14:38,708 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:14:51,827 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:14:51,834 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:15:12,964 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:15:12,972 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
+2020-03-13 03:15:47,911 [ERROR]  Exception when trying to handle message.Message must be non-empty
+2020-03-13 03:15:47,917 [ERROR]  Exception occurred while handling uri: 'http://8afe4464.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\sanic\app.py", line 976, in handle_request
+    response = await response
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 252, in message
+    metadata=metadata,
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\rasa\core\channels\telegram.py", line 36, in send_text_message
+    self.send_message(recipient_id, message_part)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "c:\users\adamb\documents\final_rasa\finalrasa\lib\site-packages\telegram\utils\request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message must be non-empty
